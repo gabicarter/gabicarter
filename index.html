@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2D Map Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <!-- Replace with your actual image file name -->
+      <img src="gabi-floating.png" alt="YourName Logo" />
+    </div>
+    <nav class="nav">
+      <ul>
+        <!-- We'll use JavaScript to scroll to specific coordinates -->
+        <li><a href="#" data-x="0"   data-y="0"   class="nav-link">Home</a></li>
+        <li><a href="#" data-x="100" data-y="0"   class="nav-link">About</a></li>
+        <li><a href="#" data-x="100" data-y="100" class="nav-link">Skills</a></li>
+        <li><a href="#" data-x="0"   data-y="100" class="nav-link">Projects</a></li>
+        <li><a href="#" data-x="200" data-y="150" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 
+    BIG container (the 'world' or 'map'): 
+    We'll place each section absolutely.
+  -->
+  <div class="world">
+    <!-- "Home" section at top-left corner (0,0) -->
+    <section class="panel home-panel">
+      <h1>Home (0,0)</h1>
+      <p>Welcome to my 2D portfolio map!</p>
+    </section>
+
+    <!-- "About" section offset horizontally -->
+    <section class="panel about-panel">
+      <h2>About (100vw,0)</h2>
+      <p>Here’s some information about me.</p>
+    </section>
+
+    <!-- "Skills" section offset diagonally -->
+    <section class="panel skills-panel">
+      <h2>Skills (100vw,100vh)</h2>
+      <p>Check out my areas of expertise.</p>
+    </section>
+
+    <!-- "Projects" section offset below the home panel -->
+    <section class="panel projects-panel">
+      <h2>Projects (0,100vh)</h2>
+      <p>Projects I’ve worked on.</p>
+    </section>
+
+    <!-- "Contact" section further out diagonally -->
+    <section class="panel contact-panel">
+      <h2>Contact (200vw,150vh)</h2>
+      <p>Let’s get in touch!</p>
+    </section>
+  </div>
+
+  <!-- JS for multi-directional smooth scrolling -->
+  <script src="script.js"></script>
+</body>
+</html>

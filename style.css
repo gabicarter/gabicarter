@@ -1,0 +1,141 @@
+/* Reset / base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow: scroll; /* Ensure we can scroll in both directions */
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #333;
+    /* 
+      Large repeating or large single image to create
+      a "map" effect behind the entire world. 
+      Option A: repeating pattern
+      Option B: one giant background if you have an enormous image
+    */
+    background: url('map.png') no-repeat; /* or no-repeat and large dimension */
+  }
+  
+  /* 
+    The "world" or "map" container. 
+    We'll give it an enormous width and height to allow 2D movement. 
+    Example: 300vw wide and 200vh tall. Adjust as needed to fit your "map" 
+  */
+  .world {
+    position: relative; /* so child elements can be absolutely positioned */
+    width: 300vw;
+    height: 200vh;
+  }
+  
+  /* 
+    Panels / sections within the map 
+    Each will be absolutely positioned at a coordinate 
+  */
+  .panel {
+    position: absolute;
+    width: 80vw;   /* each section takes up 80% of the visible width */
+    height: 80vh;  /* and 80% of the visible height */
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: auto; /* so the content can scroll if needed */
+    padding: 1rem;
+  }
+  
+  /* 
+    Position each panel at different coordinates 
+    (we’ll reference 100vw or 100vh increments to place them in a grid-like fashion)
+  */
+  
+  /* Home: 0,0 */
+  .home-panel {
+    top: 0;
+    left: 0;
+  }
+  
+  /* About: 100vw, 0 */
+  .about-panel {
+    top: 0;
+    left: 100vw;
+  }
+  
+  /* Skills: 100vw,100vh */
+  .skills-panel {
+    top: 100vh;
+    left: 100vw;
+  }
+  
+  /* Projects: 0,100vh */
+  .projects-panel {
+    top: 100vh;
+    left: 0;
+  }
+  
+  /* Contact: 200vw,150vh */
+  .contact-panel {
+    top: 150vh;
+    left: 200vw;
+  }
+  
+ /* Pin the header at the bottom of the screen, spanning the full width */
+.main-header {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 150%;
+  z-index: 999;
+  
+  /* Slightly transparent background so you can see content behind it if you wish */
+  background-color: rgba(255, 255, 255, 0);
+
+  /* Center items horizontally (and stack them if needed) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* Adjust the padding to your preference */
+  padding: 0.5rem 1rem;
+}
+
+/* The logo (YourName) is also centered by default with 'flex-direction: column' */
+.logo img {
+  width: 200px; /* Adjust to your preference */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Centering / layout control (optional) */
+  margin-bottom: 0; 
+}
+
+.nav {
+  background-color: rgba(147, 241, 205, 0.9); /* or your color choice */
+  padding: 0.5rem .5rem; 
+  border-radius: 4px;   /* optional, for a nicer shape */
+}
+
+/* Navigation bar styling */
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+/* Center each nav link's text, with some hover effect */
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+}
