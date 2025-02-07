@@ -3,15 +3,15 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: Arial, sans-serif;
-  color: #333;
-  background-color: #eaeaea;
+  color: #139174;
+  background-color: #86e195;
   /* A subtle diagonal repeating gradient pattern */
   background-image: repeating-linear-gradient(
     45deg,
-    rgba(197, 0, 0, 0.2) 0,
-    rgba(90, 23, 101, 0.2) 1px,
-    transparent .18px,
-    transparent 1.8px
+    rgba(36, 130, 92, 0.684) 0,
+    rgba(24, 146, 126, 0.689) .9px,
+    transparent 1px,
+    transparent .9px
   );
   background-attachment: relative;
 }
@@ -37,8 +37,8 @@ body {
     position: absolute;
     width: 80vw;   /* each section takes up 80% of the visible width */
     height: 80vh;  /* and 80% of the visible height */
-    background-color: rgba(60, 233, 249, 0.695);
-    border: 2px solid #ccc;
+    background-color: #584634;
+    border: 2px solid #584634;
     border-radius: 8px;
     overflow: auto; /* so the content can scroll if needed */
     padding: 1rem;
