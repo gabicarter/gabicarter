@@ -1,24 +1,22 @@
-/* Reset / base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    overflow: scroll; /* Ensure we can scroll in both directions */
-    width: 100vw;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    color: #333;
-    /* 
-      Large repeating or large single image to create
-      a "map" effect behind the entire world. 
-      Option A: repeating pattern
-      Option B: one giant background if you have an enormous image
-    */
-    background: url('map.png') no-repeat; /* or no-repeat and large dimension */
-  }
+body {
+  overflow: scroll; /* Ensure we can scroll in both directions */
+  width: 100vw;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #eaeaea;
+  /* A subtle diagonal repeating gradient pattern */
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(197, 0, 0, 0.2) 0,
+    rgba(90, 23, 101, 0.2) 1px,
+    transparent .18px,
+    transparent 1.8px
+  );
+  background-attachment: relative;
+}
+
+
   
   /* 
     The "world" or "map" container. 
@@ -39,7 +37,7 @@
     position: absolute;
     width: 80vw;   /* each section takes up 80% of the visible width */
     height: 80vh;  /* and 80% of the visible height */
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(60, 233, 249, 0.695);
     border: 2px solid #ccc;
     border-radius: 8px;
     overflow: auto; /* so the content can scroll if needed */
@@ -90,7 +88,7 @@
   z-index: 999;
   
   /* Slightly transparent background so you can see content behind it if you wish */
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(50, 231, 204, 0);
 
   /* Center items horizontally (and stack them if needed) */
   display: flex;
