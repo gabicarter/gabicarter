@@ -1,120 +1,58 @@
-body {
-  overflow: scroll; /* Ensure we can scroll in both directions */
-  width: 100vw;
-  height: 100vh;
-  font-family: Arial, sans-serif;
-  color: #139174;
-  background-color: #86e195;
-  /* A subtle diagonal repeating gradient pattern */
-  background-image: repeating-linear-gradient(
-    45deg,
-    rgba(36, 130, 92, 0.684) 0,
-    rgba(24, 146, 126, 0.689) .9px,
-    transparent 1px,
-    transparent .9px
-  );
-  background-attachment: relative;
+/* Reset defaults */
+* {
+  margin: 0;
+  padding: 2;
+  box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
 
-  
-  /* 
-    The "world" or "map" container. 
-    We'll give it an enormous width and height to allow 2D movement. 
-    Example: 300vw wide and 200vh tall. Adjust as needed to fit your "map" 
-  */
-  .world {
-    position: relative; /* so child elements can be absolutely positioned */
-    width: 300vw;
-    height: 200vh;
-  }
-  
-  /* 
-    Panels / sections within the map 
-    Each will be absolutely positioned at a coordinate 
-  */
-  .panel {
-    position: absolute;
-    width: 80vw;   /* each section takes up 80% of the visible width */
-    height: 80vh;  /* and 80% of the visible height */
-    background-color: #584634;
-    border: 2px solid #584634;
-    border-radius: 8px;
-    overflow: auto; /* so the content can scroll if needed */
-    padding: 1rem;
-  }
-  
-  /* 
-    Position each panel at different coordinates 
-    (we’ll reference 100vw or 100vh increments to place them in a grid-like fashion)
-  */
-  
-  /* Home: 0,0 */
-  .home-panel {
-    top: 0;
-    left: 0;
-  }
-  
-  /* About: 100vw, 0 */
-  .about-panel {
-    top: 0;
-    left: 100vw;
-  }
-  
-  /* Skills: 100vw,100vh */
-  .skills-panel {
-    top: 100vh;
-    left: 100vw;
-  }
-  
-  /* Projects: 0,100vh */
-  .projects-panel {
-    top: 100vh;
-    left: 0;
-  }
-  
-  /* Contact: 200vw,150vh */
-  .contact-panel {
-    top: 150vh;
-    left: 200vw;
-  }
-  
- /* Pin the header at the bottom of the screen, spanning the full width */
+/* Fixed particles background */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Fixed header styling */
 .main-header {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 150%;
-  z-index: 999;
-  
-  /* Slightly transparent background so you can see content behind it if you wish */
-  background-color: rgba(50, 231, 204, 0);
-
-  /* Center items horizontally (and stack them if needed) */
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-color: rgba(50, 231, 204, 0.9);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  /* Adjust the padding to your preference */
   padding: 0.5rem 1rem;
 }
 
-/* The logo (YourName) is also centered by default with 'flex-direction: column' */
+/* Logo styling */
 .logo img {
-  width: 200px; /* Adjust to your preference */
-  height: auto; /* Maintains aspect ratio */
-  display: block; /* Centering / layout control (optional) */
-  margin-bottom: 0; 
+  width: 200px;
+  height: auto;
+  display: block;
+  z-index: 2;
 }
 
+/* Navigation styling */
 .nav {
-  background-color: rgba(147, 241, 205, 0.9); /* or your color choice */
-  padding: 0.5rem .5rem; 
-  border-radius: 4px;   /* optional, for a nicer shape */
+  background-color: rgba(147, 241, 205, 0.9);
+  padding: 0.5rem;
+  border-radius: 4px;
 }
 
-/* Navigation bar styling */
 .nav ul {
   list-style: none;
   display: flex;
@@ -123,7 +61,6 @@ body {
   margin: 0;
 }
 
-/* Center each nav link's text, with some hover effect */
 .nav-link {
   text-decoration: none;
   color: #333;
@@ -136,4 +73,25 @@ body {
   background-color: #333;
   color: #fff;
   border-radius: 4px;
+}
+
+/* World container */
+.world {
+  width: 100%;
+  padding-top: 2rem;
+  /* Adding bottom padding so last panel isn’t hidden behind the fixed nav */
+  padding-bottom: 6rem;
+}
+
+/* Panel styling */
+.panel {
+  width: 80vw;
+  height: 80vh;
+  margin: 2rem auto;
+  background-color: rgba(88, 70, 52, 0.822);
+  border: 2px solid rgba(88, 70, 52, 0.31);
+  border-radius: 10px;
+  overflow: auto;
+  padding: 1rem;
+  color: #fff;
 }
