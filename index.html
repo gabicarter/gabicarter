@@ -7,54 +7,49 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Particles Background -->
-  <div id="particles-js" style="position: relative; overflow: scroll; width: 100vw; height: 100vh;"></div>
-
   <header class="main-header">
     <div class="logo">
       <img src="gabi-floating.png" alt="YourName Logo" />
     </div>
     <nav class="nav">
       <ul>
-        <!-- We'll use JavaScript to scroll to specific coordinates -->
-        <li><a href="#" data-x="0"   data-y="0"   class="nav-link">Home</a></li>
-        <li><a href="#" data-x="100" data-y="0"   class="nav-link">About</a></li>
-        <li><a href="#" data-x="100" data-y="100" class="nav-link">Skills</a></li>
-        <li><a href="#" data-x="0"   data-y="100" class="nav-link">Projects</a></li>
-        <li><a href="#" data-x="200" data-y="150" class="nav-link">Contact</a></li>
+        <li><a href="#" data-x="0" data-y="0" class="nav-link">Home</a></li>
+        <li><a href="#" data-x="100" data-y="0" class="nav-link">About</a></li>
+        <li><a href="#" data-x="200" data-y="0" class="nav-link">Skills</a></li>
+        <li><a href="#" data-x="0" data-y="100" class="nav-link">Projects</a></li>
+        <li><a href="#" data-x="100" data-y="100" class="nav-link">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- BIG container (the 'world' or 'map'): We'll place each section absolutely. -->
+  <!-- .world container spans 300vw x 200vh -->
   <div class="world">
-    <!-- "Home" section at top-left corner (0,0) -->
+    <!-- Particles container inside .world -->
+    <div id="particles-js"></div>
+
+    <!-- Panels positioned on a grid -->
     <section class="panel home-panel">
-      <h1>Home (0,0)</h1>
+      <h1>Home</h1>
       <p>Welcome to my 2D portfolio map!</p>
     </section>
 
-    <!-- "About" section offset horizontally -->
     <section class="panel about-panel">
-      <h2>About (100vw,0)</h2>
+      <h2>About</h2>
       <p>Here’s some information about me.</p>
     </section>
 
-    <!-- "Skills" section offset diagonally -->
     <section class="panel skills-panel">
-      <h2>Skills (100vw,100vh)</h2>
+      <h2>Skills</h2>
       <p>Check out my areas of expertise.</p>
     </section>
 
-    <!-- "Projects" section offset below the home panel -->
     <section class="panel projects-panel">
-      <h2>Projects (0,100vh)</h2>
+      <h2>Projects</h2>
       <p>Projects I’ve worked on.</p>
     </section>
 
-    <!-- "Contact" section further out diagonally -->
     <section class="panel contact-panel">
-      <h2>Contact (200vw,150vh)</h2>
+      <h2>Contact</h2>
       <p>Let’s get in touch!</p>
     </section>
   </div>
@@ -65,15 +60,24 @@
   <script>
     particlesJS("particles-js", {
       "particles": {
-        "number": { "value": 50, "density": { "enable": true, "value_area": 230 } },
-        "color": { "value": "#584634" },
+        "number": { 
+          "value": 50, 
+          "density": { "enable": true, "value_area": 230 } 
+        },
+        "color": { "value": "#613329" },
         "opacity": { "value": 0.5 },
         "size": { "value": 3 },
-        "line_linked": { "enable": true, "distance": 150, "color": "#584634", "opacity": 0.9, "width": 1 },
+        "line_linked": { 
+          "enable": true, 
+          "distance": 150, 
+          "color": "#613329", 
+          "opacity": 0.9, 
+          "width": 1 
+        },
         "move": { "enable": true, "speed": 0.5 }
       },
       "interactivity": {
-        "detect_on": "window",
+        "detect_on": "canvas",
         "events": { "onhover": { "enable": true, "mode": "push" } }
       },
       "retina_detect": true
