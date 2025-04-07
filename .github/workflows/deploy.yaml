@@ -20,4 +20,4 @@ jobs:
 
       - name: Sync files to GCS Bucket
         run: |
-          gsutil -m rsync -r . gs://your-bucket-name
+          gsutil -m rsync -r . gs://gabicarter
