@@ -13,42 +13,37 @@
     </div>
     <nav class="nav">
       <ul>
-        <li><a href="#" data-x="0" data-y="0" class="nav-link">Home</a></li>
-        <li><a href="#" data-x="100" data-y="0" class="nav-link">About</a></li>
-        <li><a href="#" data-x="200" data-y="0" class="nav-link">Skills</a></li>
-        <li><a href="#" data-x="0" data-y="100" class="nav-link">Projects</a></li>
-        <li><a href="#" data-x="100" data-y="100" class="nav-link">Contact</a></li>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- .world container spans 300vw x 200vh -->
   <div class="world">
-    <!-- Particles container inside .world -->
-    <div id="particles-js"></div>
-
-    <!-- Panels positioned on a grid -->
-    <section class="panel home-panel">
+    <section id="home" class="panel home-panel">
       <h1>Home</h1>
       <p>TEST BANNER</p>
     </section>
 
-    <section class="panel about-panel">
+    <section id="about" class="panel about-panel">
       <h2>About</h2>
       <p>Here’s some information about me.</p>
     </section>
 
-    <section class="panel skills-panel">
+    <section id="skills" class="panel skills-panel">
       <h2>Skills</h2>
       <p>Check out my areas of expertise.</p>
     </section>
 
-    <section class="panel projects-panel">
+    <section id="projects" class="panel projects-panel">
       <h2>Projects</h2>
       <p>Projects I’ve worked on.</p>
     </section>
 
-    <section class="panel contact-panel">
+    <section id="contact" class="panel contact-panel">
       <h2>Contact</h2>
       <p>Let’s get in touch!</p>
     </section>
@@ -56,7 +51,6 @@
 
   <!-- Include Particles.js Library -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <!-- Initialize Particles.js -->
   <script>
     particlesJS("particles-js", {
       "particles": {
@@ -84,7 +78,7 @@
     });
   </script>
   
-  <!-- JS for multi-directional smooth scrolling -->
+  <!-- JS for vertical smooth scrolling -->
   <script src="script.js"></script>
 </body>
 </html>
