@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Define terminal commands and responses
   const commands = {
-    help: "Available commands: help, about, skills, projects, contact, clear",
+    help: "| COMMANDS:\n├── about\n├── clear\n├── contact\n├── help\n└── skills",
     about: "Hi, I'm Gabi—a DevOps guru with a passion for tech, art, and all things creative!",
     skills: "I'm skilled in Docker, Kubernetes, AWS, CI/CD, and more. Stay tuned for updates!",
     projects: "Check out my GitHub for rad projects and collaborations.",

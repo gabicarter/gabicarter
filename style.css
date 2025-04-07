@@ -120,7 +120,8 @@ body {
   z-index: 1000;
 }
 
-.terminal-output {
+.terminal-output p {
+  white-space: pre-wrap;
   height: calc(100% - 2.5rem);
   overflow-y: auto;
   margin-bottom: 1rem;
