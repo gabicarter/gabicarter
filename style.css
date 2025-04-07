@@ -52,8 +52,7 @@ body {
   padding: 1rem;
 }
 
-/* Remove grid positioning for panels */
-/* You can still use specific styling for each panel if needed */
+/* Panels specific positioning (if needed) */
 .home-panel, .about-panel, .skills-panel, .projects-panel, .contact-panel {
   position: relative;
 }
@@ -62,7 +61,7 @@ body {
 .main-header {
   position: fixed;
   bottom: 0;
-  left: 150;
+  left: 150px;
   width: 130%;
   z-index: 999;
   background-color: rgba(50, 231, 204, 0);
@@ -76,7 +75,7 @@ body {
 .logo img {
   width: 175px;
   height: auto;
-  position: static
+  position: static;
 }
 
 /* Navigation styling */
@@ -104,4 +103,35 @@ body {
   background-color: #333;
   color: #fff;
   border-radius: 4px;
+}
+
+/* Terminal Container Styles */
+.terminal-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 58%;
+  background-color: #0000009c;
+  color: #0f0;
+  padding: 1rem;
+  font-family: monospace;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.terminal-output {
+  height: calc(100% - 2.5rem);
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+.terminal-input {
+  width: 100%;
+  border: none;
+  background: none;
+  color: #0f0;
+  font-family: monospace;
+  font-size: 1rem;
+  outline: none;
 }
