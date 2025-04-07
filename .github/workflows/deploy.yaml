@@ -26,7 +26,7 @@ jobs:
         run: |
           gsutil -m rsync -c -r . gs://${{ secrets.GCS_BUCKET }}
 
-      - name: Invalidate CDN Cache
-        run: |
-          gcloud compute url-maps invalidate-cdn-cache gabicarterdotcom --path "/*" --project ${{ secrets.GCP_PROJECT_ID }} --quiet
+      # - name: Invalidate CDN Cache
+      #   run: |
+      #     gcloud compute url-maps invalidate-cdn-cache gabicarterdotcom --path "/*" --project ${{ secrets.GCP_PROJECT_ID }} --quiet
 
