@@ -1,90 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Test</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Developer</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="main-header">
-    <div class="logo">
-      <img src="gabi-floating.png" alt="YourName Logo" />
-    </div>
-    <nav class="nav">
-      <ul>
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
+    <div class="scanline"></div>
+    <div class="grid-overlay"></div>
+    
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand glitch" data-text="GABI">
+                <DEV/>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#terminal" class="nav-link">TERMINAL</a></li>
+                <li><a href="#about" class="nav-link">ABOUT</a></li>
+                <li><a href="#skills" class="nav-link">SKILLS</a></li>
+                <li><a href="#contact" class="nav-link">CONTACT</a></li>
+            </ul>
+        </div>
     </nav>
-  </header>
 
-  <div class="world">
-    <section id="home" class="panel home-panel">
-      <h1>Home</h1>
-      <p>TEST BANNER</p>
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title glitch" data-text="Gabi Carter">Gabi Carter</h1>
+            <p class="hero-subtitle">Cloud Engineer /  Developer / Creator</p>
+            <div class="cta-buttons">
+                <a href="#terminal" class="btn btn-primary">
+                    <span>ACCESS TERMINAL</span>
+                </a>
+                <a href="#about" class="btn btn-secondary">
+                    <span>EXPLORE</span>
+                </a>
+            </div>
+        </div>
     </section>
 
-    <section id="about" class="panel about-panel">
-      <h2>About</h2>
-      <p>Here’s some information about me.</p>
+    <section id="terminal" class="section terminal-section">
+        <div class="container">
+            <div class="terminal-header">
+                <div class="terminal-title">
+                    <span class="terminal-icon">▶</span>
+                    <span>SYSTEM TERMINAL</span>
+                </div>
+                <button class="terminal-toggle" id="terminal-toggle">
+                    <span class="toggle-text">MINIMIZE</span>
+                </button>
+            </div>
+            <div class="terminal-window" id="terminal-window">
+                <div class="terminal-output" id="terminal-output"></div>
+                <div class="terminal-input-line">
+                    <span class="terminal-prompt">&gt;&gt;</span>
+                    <input type="text" class="terminal-input" id="terminal-input" placeholder="Type 'help' for commands..." autofocus />
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="skills" class="panel skills-panel">
-      <h2>Skills</h2>
-      <p>Check out my areas of expertise.</p>
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-bracket">[</span>
+                ABOUT
+                <span class="title-bracket">]</span>
+            </h2>
+            <div class="content-box">
+                <p class="placeholder-text">Gabi Carter, originally from coastal Georgia, served in the Army at Fort Carson, Colorado, and deployed to Afghanistan. After her honorable discharge, she earned her first IT certifications and launched her tech career at NORAD/NorthCom. She started on the help desk, but it wasn't long before she was promoted to Systems Administrator where she promptly fell in love with Linux (it's a lifelong commitment at this point). From there, she went on to work at Bitdefender and Red Hat before landing her role as a DevOps Engineer at Downstream, a Portland-based design firm.
+
+                    Currently, Gabi is a Senior Cloud Egineer for Dragos where she designs and implements secure cloud infrastructure accross multiple cloud providers for critical industrial security. She is passionate about automation, infrastructure as code, and all things systems/security.
+
+                    When she's not wrangling servers or automating the things, you can find her lifting weights, snapping photos, gaming, tinkering on computer projects, sewing, or hanging out with friends.</p>
+            </div>
+        </div>
     </section>
 
-    <section id="projects" class="panel projects-panel">
-      <h2>Projects</h2>
-      <p>Projects I’ve worked on.</p>
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-bracket">[</span>
+                SKILLS
+                <span class="title-bracket">]</span>
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3 class="skill-title">CLOUD</h3>
+                    <p class="placeholder-text">-AWS<br>
+                        -Azure<br>
+                        -GCP<br>
+                        -Linode
+                    </p>
+                </div>
+                <div class="skill-card">
+                    <h3 class="skill-title">AUTOMATION</h3>
+                    <p class="placeholder-text">-Terraform<br>
+                        -Terragrunt<br>
+                        -Bash<br>
+                        -Github Actions<br>
+                        -Ansible<br>
+                        -Python<br>
+                    </p>
+                </div>
+                <div class="skill-card">
+                    <h3 class="skill-title">DISTROS</h3>
+                    <p class="placeholder-text">-Debian<br>
+                        -Ubuntu<br>
+                        -Red Hat<br>
+                        -Fedora<br>
+                    </p>
+                </div>
+                <!-- <div class="skill-card">
+                    <h3 class="skill-title"></h3>
+                    <p class="placeholder-text">// Add other relevant skills</p>
+                </div> -->
+            </div>
+        </div>
     </section>
 
-    <section id="contact" class="panel contact-panel">
-      <h2>Contact</h2>
-      <p>Let’s get in touch!</p>
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-bracket">[</span>
+                CONTACT
+                <span class="title-bracket">]</span>
+            </h2>
+            <div class="content-box">
+                <p class="placeholder-text">
+                    Email: <a href="mailto:gabriellasamcarter@gmail.com" class="terminal-link">gabriellasamcarter@gmail.com</a><br>
+                    LinkedIn: <a href="https://www.linkedin.com/in/gabi-carter/" class="terminal-link" target="_blank" rel="noopener noreferrer">linkedin.com/in/your-profile</a><br>
+                    GitHub: <a href="https://github.com/gabi-carter" class="terminal-link" target="_blank" rel="noopener noreferrer">github.com/your-username</a>
+                </p>
+            </div>
+        </div>
     </section>
-  </div>
 
-  <!-- Terminal Container -->
-  <div class="terminal-container">
-    <div class="terminal-output" id="terminal-output"></div>
-    <input type="text" class="terminal-input" id="terminal-input" placeholder="Type a command..." autofocus />
-  </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 | Built by <span class="accent">&lt;gabi-carter/&gt;</span></p>
+        </div>
+    </footer>
 
-  <!-- Include Particles.js Library -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS("particles-js", {
-      "particles": {
-        "number": { 
-          "value": 50, 
-          "density": { "enable": true, "value_area": 230 } 
-        },
-        "color": { "value": "#613329" },
-        "opacity": { "value": 0.5 },
-        "size": { "value": 3 },
-        "line_linked": { 
-          "enable": true, 
-          "distance": 150, 
-          "color": "#613329", 
-          "opacity": 0.9, 
-          "width": 1 
-        },
-        "move": { "enable": true, "speed": 0.5 }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": { "onhover": { "enable": true, "mode": "push" } }
-      },
-      "retina_detect": true
-    });
-  </script>
-  
-  <!-- JS for smooth scrolling and interactive terminal -->
-  <script src="script.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
